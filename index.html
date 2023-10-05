@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BT_JS_18</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <div class="content text-center">
+    <h1>Bài tập về nhà JS_B18 (Minh Kha)</h1>
+    <h2>
+      Người dùng nhập vào số nguyên và chọn thực hiện các yêu cầu bên dưới
+    </h2>
+  </div>
+  <div class="container w-50">
+    <div class="form-group">
+      <label for="">Nhập vào các số nguyên: </label>
+      <input type="text" class="form-control" id="number" placeholder="" />
+    </div>
+    <button id="ketQua" class="btn btn-primary mt-3 mb-3">Thêm số</button>
+    <div id="result" class="alert alert-success"></div>
+
+    <!-- 1. Tính tổng các số dương -->
+    <h3>1. Tính tổng các số dương</h3>
+    <button id="sumDuong" class="btn btn-primary mt-3 mb-3">Tính</button>
+    <div id="result1" class="alert alert-success"></div>
+
+    <!-- 2. Đếm xem có bao nhiêu số dương trong mãn -->
+    <h3>2. Đếm xem có bao nhiêu số dương trong mảng</h3>
+    <button id="demDuong" class="btn btn-primary mt-3 mb-3">Đếm</button>
+    <div id="result2" class="alert alert-success"></div>
+
+    <!-- 3. Tìm số nhỏ nhất trong mảng -->
+    <h3>3. Tìm số nhỏ nhất trong mảng</h3>
+    <button id="soNhoNhat" class="btn btn-primary mt-3 mb-3">Tìm</button>
+    <div id="result3" class="alert alert-success"></div>
+
+    <!-- 4. Tìm số dương nhỏ nhất trong mảng -->
+    <h3>4. Tìm số dương nhỏ nhất trong mảng</h3>
+    <button id="soDuongNhoNhat" class="btn btn-primary mt-3 mb-3">Tìm</button>
+    <div id="result4" class="alert alert-success"></div>
+
+    <!-- 5. Tìm số chẵn cuối cùng trong mảng -->
+    <h3>5. Tìm số chẵn cuối cùng trong mảng</h3>
+    <button id="soChanCuoi" class="btn btn-primary mt-3 mb-3">Tìm</button>
+    <div id="result5" class="alert alert-success"></div>
+
+    <!-- 6. Đổi chỗ 2 giá trị trong mảng theo vị trí -->
+    <h3>6. Đổi chỗ 2 giá trị trong mãng theo vị trí</h3>
+    <div class="flex d-flex">
+      <div class="form-group w-25">
+        <label for="">Nhập số vị trí 1:</label>
+        <input type="text" class="form-control" id="viTri1" placeholder="" />
+      </div>
+      <div class="form-group w-25 ms-4">
+        <label for="">Nhập vào vị trí 2:</label>
+        <input type="text" class="form-control" id="viTri2" placeholder="" />
+      </div>
+    </div>
+
+    <button id="doiCho" class="btn btn-primary mt-3 mb-3">Đổi chỗ</button>
+    <div id="result6" class="alert alert-success"></div>
+
+    <!-- 7. Sắp xếp mảng theo thứ tự tăng dần -->
+    <h3>7. Sắp xếp mảng theo thứ tự tăng dần</h3>
+    <button id="sapXep" class="btn btn-primary mt-3 mb-3">Sắp xếp</button>
+    <div id="result7" class="alert alert-success"></div>
+
+    <!-- 8. Tìm số nguyên tố đầu tiên trong mảng -->
+    <h3>8. Tìm số nguyên tố đầu tiên trong mảng</h3>
+    <button id="soNguyenTo" class="btn btn-primary mt-3 mb-3">Tìm</button>
+    <div id="result8" class="alert alert-success"></div>
+
+    <!-- 9. Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số nguyên -->
+    <h3>
+      9. Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số nguyên
+    </h3>
+    <div class="form-group">
+      <label for="">Nhập vào các số : </label>
+      <input type="text" class="form-control" id="number2" placeholder="" />
+    </div>
+    <button id="ketQua9" class="btn btn-primary mt-3 mb-3">Thêm số</button>
+    <div id="resultThuc9" class="alert alert-success"></div>
+
+    <button id="soThuc" class="btn btn-primary mt-3 mb-3">Tìm</button>
+    <div id="result9" class="alert alert-success"></div>
+
+    <!-- 10. So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn. -->
+    <h3>
+      10. So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn(mảng
+      1).
+    </h3>
+    <button id="soSanh" class="btn btn-primary mt-3 mb-3">So Sánh</button>
+    <div id="result10" class="alert alert-success"></div>
+  </div>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
